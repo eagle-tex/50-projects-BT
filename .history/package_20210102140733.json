@@ -10,10 +10,7 @@
     "format": "./node_modules/.bin/prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|vue)\""
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ]
+    "extends": ["react-app", "plugin:prettier/recommended"]
   },
   "husky": {
     "hooks": {
@@ -21,12 +18,8 @@
     }
   },
   "lint-staged": {
-    "*.+(js|jsx)": [
-      "eslint --fix --ignore-path ./.gitignore"
-    ],
-    "*.+(json|css|scss|md)": [
-      "./node_modules/.bin/prettier --write"
-    ]
+    "*.+(js|jsx)": ["eslint --fix --ignore-path ./.gitignore"],
+    "*.+(json|css|scss|md)": ["./node_modules/.bin/prettier --write"]
   },
   "keywords": [],
   "author": "",

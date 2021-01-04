@@ -102,13 +102,10 @@
       "error",
       {
         "trailingComma": "es5",
-        "semi": true,
         "singleQuote": true,
         "printWidth": 80,
-        "jsxBracketSameLine": false,
-        "jsxSingleQuote": true,
-        "bracketSpacing": true,
         "tabWidth": 2,
+        "semi": true,
         //below line only for windows users facing CLRF and eslint/prettier error
         // non windows users feel free to delete it
         "endOfLine": "lf" // (prev-value= auto)
