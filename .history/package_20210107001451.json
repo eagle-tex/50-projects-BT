@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ignore-path ./.gitignore",
     "lint:fix": "eslint . --fix --ignore-path ./.gitignore",
-    "format": "./node_modules/.bin/prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|vue)\""
+    "format": "./node_modules/.bin/prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|scss|md|vue)\"",
+    "style:fix": "prettier-stylelint --write \"**/*"
   },
   "husky": {
     "hooks": {
