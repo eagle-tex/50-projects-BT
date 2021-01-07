@@ -16,12 +16,10 @@
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint --fix --ignore-path ./.gitignore",
-      "git-add"
+      "eslint --fix --ignore-path ./.gitignore"
     ],
     "*.+(json|yml|yaml|css|scss|md|vue)": [
-      "./node_modules/.bin/prettier --write",
-      "git-add"
+      "./node_modules/.bin/prettier --write"
     ]
   },
   "keywords": [],
