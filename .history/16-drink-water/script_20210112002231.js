@@ -28,27 +28,23 @@ function updateBigCup() {
 updateBigCup();
 
 function highlightCups(idx) {
-  // Brad's initial solution, contains an error
-  /*  if (
+  // if (
+  //   smallCups[idx].classList.contains('full') &&
+  //   !smallCups[idx].nextElementSibling.classList.contains('full')
+  // ) {
+
+  const maxIndex = smallCups.length - 1;
+
+  if (
     smallCups[idx].classList.contains('full') &&
-    !smallCups[idx].nextElementSibling.classList.contains('full')
+    !smallCups[idx < maxIndex ? idx + 1 : idx].classList.contains('full')
   ) {
     // eslint-disable-next-line no-param-reassign
     idx -= 1;
-  } */
-
-  // solution without error
-  let index = idx;
-  if (
-    smallCups[idx].classList.contains('full') &&
-    !smallCups[idx].nextElementSibling !== null
-  ) {
-    // eslint-disable-next-line no-param-reassign
-    index = idx - 1;
   }
 
   smallCups.forEach((cup, idx2) => {
-    if (idx2 <= index) {
+    if (idx2 <= idx) {
       cup.classList.add('full');
     } else {
       cup.classList.remove('full');

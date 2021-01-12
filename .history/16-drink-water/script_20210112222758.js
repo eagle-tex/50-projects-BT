@@ -28,28 +28,31 @@ function updateBigCup() {
 updateBigCup();
 
 function highlightCups(idx) {
-  // Brad's initial solution, contains an error
-  /*  if (
+  if (
     smallCups[idx].classList.contains('full') &&
     !smallCups[idx].nextElementSibling.classList.contains('full')
   ) {
+    // const maxIndex = smallCups.length - 1;
+    // let index = idx;
+
+    // if (
+    //   smallCups[idx].classList.contains('full') &&
+    //   !smallCups[idx < maxIndex ? idx + 1 : idx].classList.contains('full')
+    // ) {
     // eslint-disable-next-line no-param-reassign
     idx -= 1;
-  } */
-
-  // solution without error
-  let index = idx;
-  if (
-    smallCups[idx].classList.contains('full') &&
-    !smallCups[idx].nextElementSibling !== null
-  ) {
-    // eslint-disable-next-line no-param-reassign
-    index = idx - 1;
+    // not sure
+    // if (idx < maxIndex) idx -= 1;
+    // else idx = maxIndex;
+    // index = idx - 1;
   }
+  // console.log('idx', idx, 'index', index);
 
   smallCups.forEach((cup, idx2) => {
     if (idx2 <= index) {
       cup.classList.add('full');
+      // } else if (idx2 === index) {
+      // cup.classList.toggle('full');
     } else {
       cup.classList.remove('full');
     }
@@ -60,4 +63,5 @@ function highlightCups(idx) {
 
 smallCups.forEach((cup, idx) => {
   cup.addEventListener('click', () => highlightCups(idx));
+  console.log(`highlightCups(${idx})`);
 });
