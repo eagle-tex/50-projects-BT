@@ -66,7 +66,7 @@ function setTime() {
   minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     minutes,
     0,
-    60,
+    59,
     0,
     360
   )}deg)`;
@@ -74,12 +74,10 @@ function setTime() {
   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     seconds,
     0,
-    60,
+    59,
     0,
     360
   )}deg)`;
-
-  console.log('seconds:', seconds, '\trotate:', scale(seconds, 0, 60, 0, 360));
 
   // timeEl.innerHTML = `${hours}:${
   //   minutes < 10 ? `0${minutes}` : minutes

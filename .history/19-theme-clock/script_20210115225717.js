@@ -74,9 +74,9 @@ function setTime() {
   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     seconds,
     0,
-    60,
+    59,
     0,
-    360
+    354
   )}deg)`;
 
   console.log('seconds:', seconds, '\trotate:', scale(seconds, 0, 60, 0, 360));

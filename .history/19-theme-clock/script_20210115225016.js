@@ -66,7 +66,7 @@ function setTime() {
   minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     minutes,
     0,
-    60,
+    59,
     0,
     360
   )}deg)`;
